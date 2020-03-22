@@ -49,7 +49,7 @@ def model(loss='mse', optimizer='adam'):
     model.add(Dense(10, activation='relu'))
     model.add(Dense(1))
 
-    model.compile(optimizer=Adam(learning_rate=0.001), loss='mse')
+    model.compile(optimizer=Adam(learning_rate=0.0001), loss='mse')
 
     return model
 
