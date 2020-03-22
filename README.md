@@ -134,3 +134,6 @@ several improvements that can be made:
 Since there are no obstacles/traffic on this test track, it can be used to investigate how the throttle may also be
 autonomously controlled.
 3. Usage of more data augumentation techniques to increase the accuracy.
+
+#### References
+The code in this project was adapted from the lessons on Behavioral Cloning, which are part of the Nanodegree program. 
