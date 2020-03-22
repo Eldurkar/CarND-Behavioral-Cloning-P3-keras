@@ -131,4 +131,4 @@ several improvements that can be made:
 2. Teaching the vehicle to steer and accelerate/brake autonomously. 
 Since there are no obstacles/traffic on this test track, it can be used to investigate how the throttle may also be
 autonomously controlled.
-3. Play around with more data augumentation techniques to increase the accuracy.
+3. Usage of more data augumentation techniques to increase the accuracy.
