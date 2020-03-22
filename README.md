@@ -29,10 +29,12 @@ The model includes RELU layers to introduce nonlinearity and the data is normali
 
 ```python
 
-def model(loss='mse', optimizer='adam'):
-
+def get_model():
+    """Get Keras Model
+    :return model: keras model
+    """
     model = Sequential()
-	
+
     model.add(Lambda(lambda x: x / 255.0 - 0.5, input_shape=(160, 320, 3)))
     model.add(Cropping2D(cropping=((70,25), (0,0)), input_shape=(160,320,3)))
 
