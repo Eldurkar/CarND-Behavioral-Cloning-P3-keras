@@ -90,11 +90,10 @@ have found it successful, the architecture was recommended in the lessons and it
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set.
 Since I was using data augmentation techniques, the mean squared error was low both on the training and validation steps.
 
-The hardest part was getting the data augmentation to work. I had a working solution early on but because
-there were a lot of syntax errors and minor omissions, it took a while to piece everything together. One of the
-problems, for example, was that I was incorrectly applying the data augmentation techniques and until I created
-a visualization of what the augmented images looked like, I was not able to train a model that drives successfully
-around the track.
+I first tried training the model with the network described in the lessons but could not get the model to drive correctly.
+The next step was to add more convolutions and layer activations, which still did not get the model to do what was expected.
+After many attempts, the nvidia architecture was adapted for this project and this worked.
+The architecture worked in creating a model that could drive around the track.
 
 #### 2. Final Model Architecture
 The final model architecture code is shown above.
