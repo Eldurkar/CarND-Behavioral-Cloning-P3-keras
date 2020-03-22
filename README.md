@@ -65,10 +65,10 @@ Another technique to reduce overfitting was to introduce dropout in the network,
 #### 3. Model parameter tuning
 
 The model used an Adam optimizer, and various learning rates (LR) were iterated over to arrive at the final LR.
-# Hyperparameteres
+##### Hyperparameters
 BATCH_SIZE = 32
 EPOCH = 5
-LEARNING_PARAMETER = 0.001
+LEARNING_RATE = 0.0001
 
 #### 4. Appropriate training data
 Udacity sample data was used for training.  
