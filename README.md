@@ -65,7 +65,7 @@ Another technique to reduce overfitting was to introduce dropout in the network,
 #### 3. Model parameter tuning
 
 The model used an Adam optimizer, and various learning rates (LR) were iterated over to arrive at the final LR.
-##### Hyperparameters
+#### Hyperparameters
 ```python
 batch_size = 32
 number_of_epochs = 5
@@ -102,7 +102,7 @@ Here is a visualization of the architecture:
 
 ![Net](https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png)
 
-#### 3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set and Training Process
 To create the training data, I used the Udacity sample data as a base. For each image, normalization
 would be applied before the image was fed into the network. The training sample consisted
 of three images:
@@ -122,18 +122,15 @@ The model was then tested on the first track to ensure that the model was perfor
 
 #### Challenges and areas of improvement
 The following challenges were faced and overcome during this project:
-1. Network predicting constant steering angles:
+Network predicting constant steering angles:
 During the initial phase of training, the network would produce a constant prediction for steering
 angle regardless of the input. This was found out to be due to an unbalanced dataset with more
 entries for zero steering angle than others.
-Resizing the images.
-Train the model on second track so that car can navigate on both tracks.
-Play around with more data augumentation techniques to increase the accuracy.
 
 The current code can steer the car such that it can drive autonomously over the track. However, there are
 several improvements that can be made:
-1. Keep the car from going over either lane markings. 
-This may be accomplished by more recovery data and/or a larger network
+1. Traning the model using the second track.
 2. Teaching the vehicle to steer and accelerate/brake autonomously. 
 Since there are no obstacles/traffic on this test track, it can be used to investigate how the throttle may also be
 autonomously controlled.
+3. Play around with more data augumentation techniques to increase the accuracy.
