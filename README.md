@@ -13,7 +13,7 @@ Overview
 ---
 This repository contains starting files for the Behavioral Cloning Project.
 
-### Files Submitted & Code Quality
+### Files Submitted
 - `model.py`
 - `model.h5`
 - `video.mp4`
@@ -60,7 +60,7 @@ as well as using left and right images to help the model generalize were used.
 The model was trained and validated on different data sets to ensure that the model was not overfitting.
 The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-Another technique to reduce overfitting was to introduce dropout in the network, with a dropout rate of 0.5.
+Another technique to reduce overfitting was to introduce dropout in the network, with a dropout probability of 0.5.
 
 #### 3. Model parameter tuning
 
@@ -83,9 +83,8 @@ monitor progress of training.
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a good model was to use the [Nvidia](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) architecture since it has been proven to be very successful
-in self-driving car tasks. I would say that this was the easiest part since a lot of other students
-have found it successful, the architecture was recommended in the lessons and it's adapted for this use case.
+The overall strategy for deriving a good model was to use the [Nvidia](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) architecture since it has been proven to be very successful in self-driving car tasks. A lot of other students have also reported that it was successful. 
+The architecture was also recommended in the lessons and it's adapted for this use case.
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set.
 Since I was using data augmentation techniques, the mean squared error was low both on the training and validation steps.
@@ -112,12 +111,12 @@ of three images:
 I found that this was sufficient to meet the project requirements for the first track. To make the car
 run on the same track, additional data augmenation techniques like adding random brightness, shearing and horizontal
 shifting could be applied.
-
-Instead of storing the preprocessed data in memory all at once, using a generator pieces of the data were pulled and processed on the fly as and when needed, which was much more memory-efficient.
+##### Generator
+Instead of storing the preprocessed data in memory all at once, using a generator function, pieces of the data were pulled and processed on the fly as and when needed, which was found to be more memory-efficient.
 
 The network was then trained for 5 epochs.
 
-The model was then tested on the first track to ensure that the model was performing as expected.
+The model was tested on the first track to ensure that it was performing as expected.
 
 #### Challenges and areas of improvement
 The following challenges were faced and overcome during this project:
