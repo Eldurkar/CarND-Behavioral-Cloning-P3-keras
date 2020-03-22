@@ -66,10 +66,11 @@ Another technique to reduce overfitting was to introduce dropout in the network,
 
 The model used an Adam optimizer, and various learning rates (LR) were iterated over to arrive at the final LR.
 ##### Hyperparameters
-BATCH_SIZE = 32
-EPOCH = 5
-LEARNING_RATE = 0.0001
-
+```python
+batch_size = 32
+number_of_epochs = 5
+learning_rate = 0.0001
+```
 #### 4. Appropriate training data
 Udacity sample data was used for training.  
 
